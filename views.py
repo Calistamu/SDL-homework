@@ -4,7 +4,7 @@ from flask_login import LoginManager,login_user,UserMixin,logout_user,login_requ
 from datetime import datetime
 from model import User 
 
-app=Flask(__name__)  
+app=Blueprint('',__name__)  
 
 @app.route('/')
 def index():    

@@ -1,13 +1,22 @@
 from flask import current_app, request, url_for
 from flask_login import UserMixin, AnonymousUserMixin
 from app.exceptions import ValidationError
-
+from werkzeug.securty import generate_password_hash,check_password_hash
+from datetime import datetime
 class User(db.Model):
     __tablename__='xssusers'
     id=db.Column(db.integer,primary_key=True)
+    email=db.Column(db.String(64),unique=True,index=True)
     username=db.Column(db.String(64),unique=True,index=True)
-    def __refr__(self):
-        return '<User %r>' % self.username
+    password_hash=db.Column(db.String(128))
+
+    def password(self):
+        raise AttributeError('password is not a readable attribute')
+    @password.setter
+    def password(self,password):
+        self.password_hash=generate_password_hash(password)
+    def verify_password(self,password):
+        return check_password_hash(self.password_hash,password)
 
 class Comment(db.Model):
     __tablename__='comments'
