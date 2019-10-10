@@ -1,7 +1,6 @@
 from flask import current_app, request, url_for
 from flask_login import UserMixin, AnonymousUserMixin
-from app.exceptions import ValidationError
-from werkzeug.securty import generate_password_hash,check_password_hash
+from werkzeug.security import generate_password_hash,check_password_hash
 from datetime import datetime
 class User(db.Model):
     __tablename__='xssusers'
