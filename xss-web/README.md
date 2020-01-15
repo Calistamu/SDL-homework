@@ -62,10 +62,11 @@ burp suite拦截结果如下：
 >xsserme文件夹,在config.php中更改数据库连接信息
 * 由于之前搭建蜜罐无法ssh[解决办法](https://blog.csdn.net/qq_37458055/article/details/75205282)  
 
-[kali安装mysql教程](https://www.cnblogs.com/faithfu/p/10278163.html)
+[kali安装mysql教程](https://www.cnblogs.com/faithfu/p/10278163.html)  
 网页效果如下：
 ![](images/webpage.png)
 ## 自动化脚本
 由于到提交时间我还没有做出来，我登陆爬取了别的网站，学习使用selenium。[代码来源](https://blog.csdn.net/chenpe32cp/article/details/54232353)登录以后发现已经和以前不一样了，因为现在登录进去以后增加了新的短信验证。
 >spider.py
+
 ![](images/login.png)
