@@ -1,15 +1,13 @@
 <?php
 /**
  * config.php 系统配置：数据库连接、显示信息等
- * ----------------------------------------------------------------
- * OldCMS,site:http://www.oldcms.com
  */
 
 /* 数据库连接 */
 $config['dbHost']		= "";			//数据库地址
-$config['dbUser']		= "";				//用户
-$config['dbPwd']		= "";				//密码
-$config['database']		= "";			//数据库名
+$config['dbUser']		= "localhost";				//用户
+$config['dbPwd']		= "chaochao00..";				//密码
+$config['database']		= "try";			//数据库名
 $config['charset']		='utf8';				//数据库字符集
 $config['tbPrefix']		='oc_';					//表名前缀
 $config['dbType']		='mysql';				//数据库类型(目前只支持mysql)
@@ -32,10 +30,10 @@ $config['template']		='default';				//模板选择
 
 /* 显示设置 */
 $config['show']=array(
-	'sitename'			=>'齐迹的xss平台',											//网站名
-	'sitedesc'			=>'齐迹的xss平台',								//一句话简介
-	'keywords'			=>'齐迹的xss平台',			//keywords
-	'description'		=>'齐迹的xss平台',	//description
+	'sitename'			=>'xss平台',											//网站名
+	'sitedesc'			=>'xss平台',								//一句话简介
+	'keywords'			=>'xss平台',			//keywords
+	'description'		=>'xss平台',	//description
 	'adminmail'			=>'xsserme@sina.cn'
 );
 
