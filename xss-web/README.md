@@ -2,7 +2,7 @@
 ## 实验要求
 - [x] 找一个具有xss漏洞的网页理解xss漏洞的原理。
 - [x] 自己写一个具有xss漏洞的网页（推荐django）,包括登录页面和评论页面（每个用户都可以看到其他用户的评论内容、用户id、评论时间）
-- [x] 写一个自动化脚本，自动提交表单登录网站，进入论坛页面，并爬取论坛中的信息
+- [x] 写一个自动化脚本，使用selenium自动提交表单登录网站，进入论坛页面，并爬取论坛中的信息
 ## 实验步骤
 ### xss漏洞
 #### 实验环境
@@ -57,14 +57,15 @@ burp suite拦截结果如下：
 得到结果，并可以看到通关信息
 ![](images/xssattack2-2.png)
 ## xss-web网页搭建
->xssweb文件夹中，实现了网页搭建的模板，没有实现连接数据库
-后端数据库：
-  xssusers
-  xsscomments  
---templates：各种页面的模板  
-login.html登陆页面
-comments.html评论页面
-register.html注册页面  
---forms.py.  
---models.py
+[xss搭建教程](https://blog.csdn.net/u011781521/article/details/53895363)
+使用kali搭建，scp将文件夹内容拷贝到kali
+>xsserme文件夹,在config.php中更改数据库连接信息
+* 由于之前搭建蜜罐无法ssh[解决办法](https://blog.csdn.net/qq_37458055/article/details/75205282)  
+
+[kali安装mysql教程](https://www.cnblogs.com/faithfu/p/10278163.html)
+网页效果如下：
+![](images/webpage.png)
 ## 自动化脚本
+由于到提交时间我还没有做出来，我登陆爬取了别的网站，学习使用selenium。[代码来源](https://blog.csdn.net/chenpe32cp/article/details/54232353)登录以后发现已经和以前不一样了，因为现在登录进去以后增加了新的短信验证。
+>spider.py
+![](images/login.png)
